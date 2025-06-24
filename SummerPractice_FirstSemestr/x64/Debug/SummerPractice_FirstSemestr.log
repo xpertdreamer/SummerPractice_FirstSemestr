@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\main.c(11,18): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+  SummerPractice_FirstSemestr.vcxproj -> C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\x64\Debug\SummerPractice_FirstSemestr.exe
