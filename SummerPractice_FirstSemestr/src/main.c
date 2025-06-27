@@ -1,36 +1,82 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "include/insertionSort.h"
+#include "include/io.h"
+#include "include/mainMenu.h"
+#include "include/utils.h"
+#include <conio.h>
+#include <locale.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include "io.h"
-#include "utils.h"
-#include "insertionSort.h"
 
-int main(int argc, char *argv[]) {
-  if (argc != 3) {
-    fprintf(stderr, "РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ: %s <РІС…РѕРґРЅРѕР№_С„Р°Р№Р»> <РІС‹С…РѕРґРЅРѕР№_С„Р°Р№Р»>\n",
-            argv[0]);
-    return 1;
-  }
+int main() {
+    setlocale(LC_ALL, "Ru");
 
-  const char *inputFile = argv[1];
-  const char *outputFile = argv[2];
+    printf("Учебная практика\n");
+    printf("Задание: Cортировка вставками\n");
+    printf("Номер бригады: 4\n");
+    printf("Выполнили: Будников А., Гурин А., Захаров А.\n");
+    printf("\nНажмите любую клавишу для продолжения...");
+    _getch();
 
-  int *array = NULL;
-  int qt = 0;
+    int* array = NULL;
+    int capacity = 0;
+    int size = 0;
+    int min = 0;
+    int max = 1000;
+    int res;
+    char inputFile[MAX_FILENAME_LENGTH], outputFile[MAX_FILENAME_LENGTH];
 
-  int res = readArrayFromFile(inputFile, &array, &qt);
-  if (res != 0) {
-    return 1;
-  }
+    switch (arrowMenu()) {
+    case 1:
+        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
+        size = inputArray(&array, &capacity);
+        if (size == -1) {
+            printf("Ошибка при вводе массива!\n");
+            return 1;
+        }
+        break;
 
-  insertionSort(array, qt);
+    case 2:
+        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
+        size = inputInt("Введите размер массива: ");
+        inputRange(&min, &max);
+        array = generateRandomArray(size, min, max);
+        if (array == NULL) {
+            return 0;
+        }
 
-  res = writeArrayToFile(outputFile, array, qt);
+        printf("Сгенерированный массив:");
+        for (int i = 0; i < size; i++) {
+            printf(" %d,", array[i]);
+        }
+        break;
 
-  free(array);
+    case 3:
+        if (inputFilename(inputFile, "Введите имя исходного файла: ")) return 1;
+        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
+        if ((res = readArrayFromFile(inputFile, &array, &size)) != 0) {
+            fprintf(stderr, "Ошибка чтения файла\n");
+            return 1;
+        }
+        break;
 
-  if (res != 0) {
-    return 1;
-  }
+    case 4:
+        return 0;
 
-  return 0;
+    default:
+        fprintf(stderr, "Неверный выбор\n");
+        return 1;
+    }
+
+    insertionSort(array, size);
+
+    if ((res = writeArrayToFile(outputFile, array, size)) != 0) {
+        fprintf(stderr, "Ошибка записи в файл\n");
+        free(array);
+        return 1;
+    }
+
+    free(array);
+    printf("\nСортировка завершена. Результат сохранен в файл '%s'\n", outputFile);
+    return 0;
 }

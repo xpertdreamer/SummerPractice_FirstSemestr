@@ -19,15 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InsertionSort.c" />
-    <ClCompile Include="io.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="src\InsertionSort.c" />
+    <ClCompile Include="src\io.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\mainMenu.c" />
+    <ClCompile Include="src\utils.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="insertionSort.h" />
-    <ClInclude Include="io.h" />
-    <ClInclude Include="tests.h" />
-    <ClInclude Include="utils.h" />
+    <ClInclude Include="src\include\insertionSort.h" />
+    <ClInclude Include="src\include\io.h" />
+    <ClInclude Include="src\include\mainMenu.h" />
+    <ClInclude Include="src\include\utils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -87,6 +89,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalModuleDependencies>$(ProjectDir)include</AdditionalModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,6 +105,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalModuleDependencies>$(ProjectDir)include</AdditionalModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
