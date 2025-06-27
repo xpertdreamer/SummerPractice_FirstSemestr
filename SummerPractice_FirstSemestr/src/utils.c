@@ -1,5 +1,26 @@
 #include "include/utils.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
+void createFolderIfNotExists(const char* path) {
+#ifdef _WIN32
+    if (CreateDirectoryW(path, NULL)) {
+        printf("Папка \"%s\" создана успешно.\n", path);
+    }
+    else {
+        if (GetLastError() == ERROR_ALREADY_EXISTS) {
+            return;
+        }
+        else {
+            printf("Ошибка при создании папки \"%s\".\n", path);
+        }
+    }
+#endif
+}
+
+
 void removeNewline(char* str) {
     size_t len = strlen(str);
     if (len > 0 && str[len - 1] == '\n') {

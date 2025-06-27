@@ -11,6 +11,9 @@
 int main() {
     setlocale(LC_ALL, "Ru");
 
+    createFolderIfNotExists(L"inputs");
+    createFolderIfNotExists(L"outputs");
+
     printf("Учебная практика\n");
     printf("Задание: Cортировка вставками\n");
     printf("Номер бригады: 4\n");

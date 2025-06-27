@@ -7,5 +7,9 @@
 #include <stdio.h>
 
 void removeNewline(char* str);
+void createFolderIfNotExists(const char* path);
+int inputInt(const char* prompt);
+void inputRange(int* min, int* max);
+int inputFilename(char* buffer, const char* prompt);
 
 #endif // !UTILS_H
