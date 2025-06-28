@@ -1,6 +1,7 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 
 #include "include/io.h"
+#include "include/utils.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,13 +20,13 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
     int count = 0;
 
     if (!inputFile) {
-        fprintf(stderr, "Ошибка чтения входного файла %s\n", filename);
+        fprintf(stderr, "РћС€РёР±РєР° С‡С‚РµРЅРёСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° %s\n", filename);
         return 1;
     }
 
     if (!fgets(buffer, MAX_BUFFER, inputFile) ||
         sscanf(buffer, "%d", size) != 1 || *size <= 0) {
-        fprintf(stderr, "Ошибка чтения входного файла %s\n", filename);
+        fprintf(stderr, "РћС€РёР±РєР° С‡С‚РµРЅРёСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° %s\n", filename);
         fclose(inputFile);
         return 2;
     }
@@ -33,7 +34,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
     *array = malloc(*size * sizeof(int));
 
     if (!*array) {
-        fprintf(stderr, "Ошибка выделения памяти\n");
+        fprintf(stderr, "РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё\n");
         fclose(inputFile);
         return 3;
     }
@@ -42,7 +43,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
         char* token = strtok(buffer, " \t\n");
         while (token && count < *size) {
             if (sscanf(token, "%d", &(*array)[count]) != 1) {
-                fprintf(stderr, "Ошибка при чтении строки #%d из файла %s\n", count + 1, filename);
+                fprintf(stderr, "РћС€РёР±РєР° РїСЂРё С‡С‚РµРЅРёРё СЃС‚СЂРѕРєРё #%d РёР· С„Р°Р№Р»Р° %s\n", count + 1, filename);
                 free(*array);
                 fclose(inputFile);
                 return 4;
@@ -55,7 +56,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
     fclose(inputFile);
 
     if (count != *size) {
-        fprintf(stderr, "Ошибка: ожидалось %d чисел, но прочитано %d из файла %s\n", *size, count, filename);
+        fprintf(stderr, "РћС€РёР±РєР°: РѕР¶РёРґР°Р»РѕСЃСЊ %d С‡РёСЃРµР», РЅРѕ РїСЂРѕС‡РёС‚Р°РЅРѕ %d РёР· С„Р°Р№Р»Р° %s\n", *size, count, filename);
         free(*array);
         return 5;
     }
@@ -65,7 +66,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
 
 int writeArrayToFile(const char* filename, int* array, int size) {
     if (!filename || !array || size <= 0) {
-        fprintf(stderr, "Некорректные входные данные\n");
+        fprintf(stderr, "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ\n");
         return 1;
     }
 
@@ -78,11 +79,11 @@ int writeArrayToFile(const char* filename, int* array, int size) {
 
     FILE* outputFile = fopen(fullPath, "w");
     if (!outputFile) {
-        fprintf(stderr, "Ошибка чтения входного файла %s\n", filename);
+        fprintf(stderr, "РћС€РёР±РєР° С‡С‚РµРЅРёСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° %s\n", filename);
         return 1;
     }
 
-    fprintf(outputFile, "Отсортированный массив: \n");
+    fprintf(outputFile, "РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: \n");
     for (int i = 0; i < size; i++) {
         fprintf(outputFile, "%d ", array[i]);
     }
@@ -94,21 +95,21 @@ int writeArrayToFile(const char* filename, int* array, int size) {
 }
 
 int inputArray(int** array, int* capacity) {
-    printf("Введите элементы массива через пробел: ");
+    printf("Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР° С‡РµСЂРµР· РїСЂРѕР±РµР»: ");
 
     int num;
     int size = 0;
     char buffer[MAX_BUFFER];
 
     if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
-        printf("Ошибка ввода!\n");
+        printf("РћС€РёР±РєР° РІРІРѕРґР°!\n");
         return -1;
     }
 
     char* token = strtok(buffer, " \t\n");
     while (token != NULL) {
         if (sscanf(token, "%d", &num) != 1) {
-            printf("Ошибка: введено не число!\n");
+            printf("РћС€РёР±РєР°: РІРІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ!\n");
             return -1;
         }
 
@@ -116,7 +117,7 @@ int inputArray(int** array, int* capacity) {
             *capacity = (*capacity == 0) ? 1 : *capacity * 2;
             int *temp = (int*)realloc(*array, *capacity * sizeof(int));
             if (temp == NULL) {
-                printf("Ошибка выделения памяти!\n");
+                printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё!\n");
                 return -1;
             }
             *array = temp;
@@ -126,18 +127,23 @@ int inputArray(int** array, int* capacity) {
         token = strtok(NULL, " \t\n");
     }
 
+    if (saveArrayToInputFile(size, *array) == 1) {
+        fprintf(stderr, "РћС€РёР±РєР° РїСЂРё Р·Р°РїРёСЃРё РІ С„Р°Р№Р»С‹\n");
+        return -1;
+    }
+
     return size;
 }
 
-int* generateRandomArray(int size, int min, int max) {
+int* generateRandomArray(int size, int min, int max) {    
     if (size <= 0 || min >= max) {
-        printf("Некорректные параметры генерации!\n");
+        printf("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РіРµРЅРµСЂР°С†РёРё!\n");
         return NULL;
     }
 
     int *array = (int*)malloc(size * sizeof(int));
     if (array == NULL) {
-        printf("Ошибка выделения памяти!\n");
+        printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё!\n");
         return 1;
     }
 
@@ -145,6 +151,11 @@ int* generateRandomArray(int size, int min, int max) {
 
     for (int i = 0; i < size; i++) {
         array[i] = min + rand() % (min - max + 1);
+    }
+
+    if (saveArrayToInputFile(size, array) == 1) {
+        fprintf(stderr, "РћС€РёР±РєР° РїСЂРё Р·Р°РїРёСЃРё РІ С„Р°Р№Р»С‹\n");
+        return NULL;
     }
 
     return array;

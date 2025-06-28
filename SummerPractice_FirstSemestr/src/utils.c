@@ -57,3 +57,35 @@ int inputFilename(char* buffer, const char* prompt) {
     removeNewline(buffer);
     return 0;
 }
+
+int saveArrayToInputFile(int size, int* array) {
+    int fileNumber = 1;
+    char fullPath[256];
+    FILE* file = NULL;
+
+    while (1) {
+        snprintf(fullPath, sizeof(fullPath), "inputs/%s_%d.txt", "input", fileNumber);
+        file = fopen(fullPath, "r");
+
+        if (file == NULL) {
+            file = fopen(fullPath, "w");
+            break;
+        }
+
+        fclose(file);
+        fileNumber++;
+    }
+    
+    if (!file) {
+        fprintf(stderr, "Ошибка чтения входного файла %s\n", fullPath);
+        return 1;
+    }
+
+    fprintf(file, "%d\n", size);
+    for (int i = 0; i < size; i++) {
+        fprintf(file, "%d ", array[i]);
+    }
+    fclose(file);
+
+    return 0;
+}

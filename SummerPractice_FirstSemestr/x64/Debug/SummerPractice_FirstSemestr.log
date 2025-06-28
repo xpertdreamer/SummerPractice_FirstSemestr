@@ -1,5 +1,2 @@
-﻿  main.c
-C:\Users\IWOFLEUR\Desktop\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(14,29): warning C4133: функция: несовместимые типы - из "unsigned short [7]" в "const char *"
-C:\Users\IWOFLEUR\Desktop\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(15,29): warning C4133: функция: несовместимые типы - из "unsigned short [8]" в "const char *"
-C:\Users\IWOFLEUR\Desktop\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(78,9): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
+﻿  mainMenu.c
   SummerPractice_FirstSemestr.vcxproj -> C:\Users\IWOFLEUR\Desktop\SummerPractice_FirstSemestr\x64\Debug\SummerPractice_FirstSemestr.exe
