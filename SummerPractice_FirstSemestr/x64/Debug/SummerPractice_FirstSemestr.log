@@ -1,2 +1,13 @@
-﻿  mainMenu.c
-  SummerPractice_FirstSemestr.vcxproj -> C:\Users\IWOFLEUR\Desktop\SummerPractice_FirstSemestr\x64\Debug\SummerPractice_FirstSemestr.exe
+﻿  InsertionSort.c
+  io.c
+  main.c
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\io.c(147,9): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int"
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\io.c(150,11): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(14,29): warning C4133: функция: несовместимые типы - из "unsigned short [7]" в "const char *"
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(15,29): warning C4133: функция: несовместимые типы - из "unsigned short [8]" в "const char *"
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\main.c(106,13): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
+  mainMenu.c
+  utils.c
+C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\SummerPractice_FirstSemestr\src\utils.c(9,26): warning C4133: функция: несовместимые типы - из "const char *" в "LPCWSTR"
+  Создание кода...
+  SummerPractice_FirstSemestr.vcxproj -> C:\Users\RENNDI\source\repos\praktika\SummerPractice_FirstSemestr\x64\Debug\SummerPractice_FirstSemestr.exe

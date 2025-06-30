@@ -21,65 +21,98 @@ int main() {
     printf("\nНажмите любую клавишу для продолжения...");
     _getch();
 
-    int* array = NULL;
-    int capacity = 0;
-    int size = 0;
-    int min = 0;
-    int max = 1000;
-    int res;
-    char inputFile[MAX_FILENAME_LENGTH], outputFile[MAX_FILENAME_LENGTH];
+    while (1) {
+        int* array = NULL;
+        int capacity = 0;
+        int size = 0;
+        int min = 0;
+        int max = 1000;
+        int res;
+        char inputFile[MAX_FILENAME_LENGTH], outputFile[MAX_FILENAME_LENGTH];
 
-    switch (arrowMenu()) {
-    case 1:
-        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
-        size = inputArray(&array, &capacity);
-        if (size == -1) {
-            printf("Ошибка при вводе массива!\n");
-            return 1;
+        switch (arrowMenu()) {
+        case 1: {
+            if (inputFilename(outputFile, "Введите имя выходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            size = inputArray(&array, &capacity);
+            if (size == -1) {
+                printf("Ошибка при вводе массива!\n");
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            break;
         }
-        break;
 
-    case 2:
-        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
-        size = inputInt("Введите размер массива: ");
-        inputRange(&min, &max);
-        array = generateRandomArray(size, min, max);
-        if (array == NULL) {
+        case 2: {
+            if (inputFilename(outputFile, "Введите имя выходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            size = inputInt("Введите размер массива: ");
+            inputRange(&min, &max);
+            array = generateRandomArray(size, min, max);
+            if (array == NULL) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+
+            printf("Сгенерированный массив:");
+            for (int i = 0; i < size; i++) {
+                printf(" %d,", array[i]);
+            }
+            break;
+        }
+
+        case 3: {
+            if (inputFilename(inputFile, "Введите имя исходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            if (inputFilename(outputFile, "Введите имя выходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            if ((res = readArrayFromFile(inputFile, &array, &size)) != 0) {
+                fprintf(stderr, "Ошибка чтения файла\n");
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
+            break;
+        }
+
+        case 4:
             return 0;
+
+        default:
+            fprintf(stderr, "Неверный выбор\n");
+            printf("Нажмите любую клавишу для продолжения...");
+            _getch();
+            continue;
         }
 
-        printf("Сгенерированный массив:");
-        for (int i = 0; i < size; i++) {
-            printf(" %d,", array[i]);
+        insertionSort(array, size);
+
+        if (res = writeArrayToFile(outputFile, array, size)) {
+            fprintf(stderr, "Ошибка записи в файл\n");
+            free(array);
+            printf("Нажмите любую клавишу для продолжения...");
+            _getch();
+            continue;
         }
-        break;
 
-    case 3:
-        if (inputFilename(inputFile, "Введите имя исходного файла: ")) return 1;
-        if (inputFilename(outputFile, "Введите имя выходного файла: ")) return 1;
-        if ((res = readArrayFromFile(inputFile, &array, &size)) != 0) {
-            fprintf(stderr, "Ошибка чтения файла\n");
-            return 1;
-        }
-        break;
-
-    case 4:
-        return 0;
-
-    default:
-        fprintf(stderr, "Неверный выбор\n");
-        return 1;
-    }
-
-    insertionSort(array, size);
-
-    if ((res = writeArrayToFile(outputFile, array, size)) != 0) {
-        fprintf(stderr, "Ошибка записи в файл\n");
         free(array);
-        return 1;
+            printf("\nСортировка завершена. Результат сохранен в файл '%s'\n", outputFile);
+            printf("Нажмите любую клавишу для продолжения...");
+            _getch();
     }
-
-    free(array);
-    printf("\nСортировка завершена. Результат сохранен в файл '%s'\n", outputFile);
     return 0;
 }
