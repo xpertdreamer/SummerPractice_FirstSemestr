@@ -40,7 +40,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
     }
 
     while (count < *size && fgets(buffer, MAX_BUFFER, inputFile)) {
-        char* token = strtok(buffer, " \t\n");
+        char* token = strtok(buffer, " ,\t\n");
         while (token && count < *size) {
             if (sscanf(token, "%d", &(*array)[count]) != 1) {
                 fprintf(stderr, "Ошибка при чтении строки #%d из файла %s\n", count + 1, filename);
@@ -49,7 +49,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
                 return 4;
             }
             count++;
-            token = strtok(NULL, " \t\n");
+            token = strtok(NULL, " ,\t\n");
         }
     }
 
