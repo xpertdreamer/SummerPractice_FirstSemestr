@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\io.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\include\\io.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\io.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\InsertionSort.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\InsertionSort.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\insertionSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\include\\insertionSort.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\utils.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\include\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5CDB0146-024D-44F2-9117-DD95CDCDC40E}|SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr.vcxproj|solutionrelative:SummerPractice_FirstSemestr\\src\\include\\io.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,69 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "io.h",
-              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h",
-              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\include\\io.h",
-              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h",
-              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\include\\io.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-28T13:33:43.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "io.c",
-              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c",
-              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\io.c",
-              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c",
-              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\io.c",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAIwIEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-06-27T17:47:33.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "utils.h",
-              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\utils.h",
-              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\include\\utils.h",
-              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\utils.h",
-              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\include\\utils.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-27T18:26:53.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "utils.c",
-              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\utils.c",
-              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\utils.c",
-              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\utils.c",
-              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\utils.c",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-06-27T18:25:34.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mainMenu.c",
-              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\mainMenu.c",
-              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\mainMenu.c",
-              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\mainMenu.c",
-              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\mainMenu.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-06-27T17:44:27.249Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -105,9 +52,101 @@
               "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\main.c",
               "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\main.c",
               "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\main.c",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwGIAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAmwG8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-06-27T17:44:08.311Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "insertionSort.h",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\insertionSort.h",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\include\\insertionSort.h",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\insertionSort.h",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\include\\insertionSort.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-01T07:18:28.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InsertionSort.c",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\insertionSort.c",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\insertionSort.c",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\insertionSort.c",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\insertionSort.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-07-01T07:17:33.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "io.h",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\include\\io.h",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\io.h",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\include\\io.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-28T13:33:43.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "io.c",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\io.c",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\io.c",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\io.c",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFUAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-06-27T17:47:33.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "utils.c",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\utils.c",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\utils.c",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\utils.c",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\utils.c",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwE0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-06-27T18:25:34.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "utils.h",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\utils.h",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\include\\utils.h",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\include\\utils.h",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\include\\utils.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-27T18:26:53.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "mainMenu.c",
+              "DocumentMoniker": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\mainMenu.c",
+              "RelativeDocumentMoniker": "SummerPractice_FirstSemestr\\src\\mainMenu.c",
+              "ToolTip": "C:\\Users\\IWOFLEUR\\Desktop\\SummerPractice_FirstSemestr\\SummerPractice_FirstSemestr\\src\\mainMenu.c",
+              "RelativeToolTip": "SummerPractice_FirstSemestr\\src\\mainMenu.c",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-06-27T17:44:27.249Z",
               "EditorCaption": ""
             }
           ]

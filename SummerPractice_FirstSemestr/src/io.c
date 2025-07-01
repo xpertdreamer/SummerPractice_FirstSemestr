@@ -11,8 +11,8 @@
 int readArrayFromFile(const char* filename, int** array, int* size) {
     char fullPath[256] = "inputs/"; 
     strcat(fullPath, filename);
-    if (strstr(fullPath, ".txt") == NULL) {
-        strcat(fullPath, ".txt");
+    if (strstr(fullPath, ".csv") == NULL) {
+        strcat(fullPath, ".csv");
     }
 
     FILE* inputFile = fopen(fullPath, "r");
@@ -64,7 +64,7 @@ int readArrayFromFile(const char* filename, int** array, int* size) {
     return 0;
 }
 
-int writeArrayToFile(const char* filename, int* array, int size) {
+int writeArrayToFile(const char* filename, int* array, int size, int swapCount) {
     if (!filename || !array || size <= 0) {
         fprintf(stderr, "Некорректные входные данные\n");
         return 1;
@@ -73,8 +73,8 @@ int writeArrayToFile(const char* filename, int* array, int size) {
     char fullPath[256];
     snprintf(fullPath, sizeof(fullPath), "%s%s", "outputs/", filename);
 
-    if (strlen(filename) < 4 || strcmp(filename + strlen(filename) - 4, ".txt") != 0) {
-        strncat(fullPath, ".txt", 256 - strlen(fullPath) - 1);
+    if (strlen(filename) < 4 || strcmp(filename + strlen(filename) - 4, ".csv") != 0) {
+        strncat(fullPath, ".csv", 256 - strlen(fullPath) - 1);
     }
 
     FILE* outputFile = fopen(fullPath, "w");
@@ -83,9 +83,14 @@ int writeArrayToFile(const char* filename, int* array, int size) {
         return 1;
     }
 
-    fprintf(outputFile, "Отсортированный массив: \n");
+    fprintf(outputFile, "Количество перестановок: %d \n", swapCount);
     for (int i = 0; i < size; i++) {
-        fprintf(outputFile, "%d ", array[i]);
+        if (i < size - 1) {
+            fprintf(outputFile, "%d,", array[i]);
+        }
+        else {
+            fprintf(outputFile, "%d", array[i]);
+        }
     }
     fprintf(outputFile, "\n");
 
@@ -94,7 +99,7 @@ int writeArrayToFile(const char* filename, int* array, int size) {
     return 0;
 }
 
-int inputArray(int** array, int* capacity) {
+int inputArray(const char* filename, int** array, int* capacity) {
     printf("Введите элементы массива через пробел: ");
 
     int num;
@@ -127,7 +132,7 @@ int inputArray(int** array, int* capacity) {
         token = strtok(NULL, " \t\n");
     }
 
-    if (saveArrayToInputFile(size, *array) == 1) {
+    if (saveArrayToInputFile(size, *array, filename) == 1) {
         fprintf(stderr, "Ошибка при записи в файлы\n");
         return -1;
     }
@@ -135,7 +140,7 @@ int inputArray(int** array, int* capacity) {
     return size;
 }
 
-int* generateRandomArray(int size, int min, int max) {    
+int* generateRandomArray(const char* filename, int size, int min, int max) {    
     if (size <= 0 || min >= max) {
         printf("Некорректные параметры генерации!\n");
         return NULL;
@@ -153,7 +158,7 @@ int* generateRandomArray(int size, int min, int max) {
         array[i] = min + rand() % (min - max + 1);
     }
 
-    if (saveArrayToInputFile(size, array) == 1) {
+    if (saveArrayToInputFile(size, array, filename) == 1) {
         fprintf(stderr, "Ошибка при записи в файлы\n");
         return NULL;
     }

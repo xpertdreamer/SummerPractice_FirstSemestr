@@ -6,8 +6,8 @@
 #include <stdio.h>
 
 int readArrayFromFile(const char* filename, int** array, int* size);
-int writeArrayToFile(const char* filename, int* array, int size);
-int inputArray(int **array, int *capacity);
-int *generateRandomArray(int size, int min, int max);
+int writeArrayToFile(const char* filename, int* array, int size, int swapCount);
+int inputArray(const char* filename, int **array, int *capacity);
+int *generateRandomArray(const char* filename, int size, int min, int max);
 
 #endif // !IO_H

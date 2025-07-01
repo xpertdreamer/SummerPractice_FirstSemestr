@@ -11,6 +11,6 @@ void createFolderIfNotExists(const char* path);
 int inputInt(const char* prompt);
 void inputRange(int* min, int* max);
 int inputFilename(char* buffer, const char* prompt);
-int saveArrayToInputFile(int size, int *array);
+int saveArrayToInputFile(int size, int *array, const char *filename);
 
 #endif // !UTILS_H

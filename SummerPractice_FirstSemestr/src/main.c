@@ -32,12 +32,17 @@ int main() {
 
         switch (arrowMenu()) {
         case 1: {
+            if (inputFilename(inputFile, "Введите имя исходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
             if (inputFilename(outputFile, "Введите имя выходного файла: ")) {
                 printf("Нажмите любую клавишу для продолжения...");
                 _getch();
                 continue;
             }
-            size = inputArray(&array, &capacity);
+            size = inputArray(inputFile, &array, &capacity);
             if (size == -1) {
                 printf("Ошибка при вводе массива!\n");
                 printf("Нажмите любую клавишу для продолжения...");
@@ -48,6 +53,11 @@ int main() {
         }
 
         case 2: {
+            if (inputFilename(inputFile, "Введите имя исходного файла: ")) {
+                printf("Нажмите любую клавишу для продолжения...");
+                _getch();
+                continue;
+            }
             if (inputFilename(outputFile, "Введите имя выходного файла: ")) {
                 printf("Нажмите любую клавишу для продолжения...");
                 _getch();
@@ -55,7 +65,7 @@ int main() {
             }
             size = inputInt("Введите размер массива: ");
             inputRange(&min, &max);
-            array = generateRandomArray(size, min, max);
+            array = generateRandomArray(inputFile, size, min, max);
             if (array == NULL) {
                 printf("Нажмите любую клавишу для продолжения...");
                 _getch();
@@ -97,11 +107,9 @@ int main() {
             printf("Нажмите любую клавишу для продолжения...");
             _getch();
             continue;
-        }
+        } 
 
-        insertionSort(array, size);
-
-        if (res = writeArrayToFile(outputFile, array, size)) {
+        if (res = writeArrayToFile(outputFile, array, size, insertionSort(array, size))) {
             fprintf(stderr, "Ошибка записи в файл\n");
             free(array);
             printf("Нажмите любую клавишу для продолжения...");
@@ -110,7 +118,7 @@ int main() {
         }
 
         free(array);
-            printf("\nСортировка завершена. Результат сохранен в файл '%s'\n", outputFile);
+            printf("\nСортировка завершена.\nИсходные данные сохранены в файл '%s'. Результат сохранен в файл '%s'\n", inputFile, outputFile);
             printf("Нажмите любую клавишу для продолжения...");
             _getch();
     }

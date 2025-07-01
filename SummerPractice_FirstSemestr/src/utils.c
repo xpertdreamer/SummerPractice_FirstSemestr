@@ -1,11 +1,7 @@
 #include "include/utils.h"
-
-#ifdef _WIN32
 #include <windows.h>
-#endif
 
 void createFolderIfNotExists(const char* path) {
-#ifdef _WIN32
     if (CreateDirectoryW(path, NULL)) {
         printf("Папка \"%s\" создана успешно.\n", path);
     }
@@ -17,7 +13,6 @@ void createFolderIfNotExists(const char* path) {
             printf("Ошибка при создании папки \"%s\".\n", path);
         }
     }
-#endif
 }
 
 
@@ -32,7 +27,7 @@ int inputInt(const char* prompt) {
     int value;
     printf("%s", prompt);
     while (scanf("%d", &value) != 1) {
-        printf("Ошибка! Попробуйте снова: ");
+        printf("Ошибка! Неверно введено число. Попробуйте снова: ");
         while (getchar() != '\n');
     }
     while (getchar() != '\n');
@@ -42,7 +37,7 @@ int inputInt(const char* prompt) {
 void inputRange(int* min, int* max) {
     printf("Введите границы диапазона (min max): ");
     while (scanf("%d %d", min, max) != 2) {
-        printf("Ошибка! Попробуйте снова: ");
+        printf("Ошибка! Неверные границы. Попробуйте снова: ");
         while (getchar() != '\n');
     }
     while (getchar() != '\n');
@@ -58,32 +53,30 @@ int inputFilename(char* buffer, const char* prompt) {
     return 0;
 }
 
-int saveArrayToInputFile(int size, int* array) {
-    int fileNumber = 1;
+int saveArrayToInputFile(int size, int* array, const char* filename) {
     char fullPath[256];
-    FILE* file = NULL;
 
-    while (1) {
-        snprintf(fullPath, sizeof(fullPath), "inputs/%s_%d.txt", "input", fileNumber);
-        file = fopen(fullPath, "r");
+    snprintf(fullPath, sizeof(fullPath), "%s%s", "inputs/", filename);
 
-        if (file == NULL) {
-            file = fopen(fullPath, "w");
-            break;
-        }
-
-        fclose(file);
-        fileNumber++;
+    if (strlen(filename) < 4 || strcmp(filename + strlen(filename) - 4, ".csv") != 0) {
+        strncat(fullPath, ".csv", 256 - strlen(fullPath) - 1);
     }
-    
+
+    FILE* file = fopen(fullPath, "w");
     if (!file) {
-        fprintf(stderr, "Ошибка чтения входного файла %s\n", fullPath);
+        fprintf(stderr, "Ошибка чтения входного файла %s\n", filename);
         return 1;
     }
 
     fprintf(file, "%d\n", size);
     for (int i = 0; i < size; i++) {
-        fprintf(file, "%d ", array[i]);
+        if (i < size - 1) {
+            fprintf(file, "%d,", array[i]);
+        }
+        else
+        {
+            fprintf(file, "%d", array[i]);
+        }
     }
     fclose(file);
 
