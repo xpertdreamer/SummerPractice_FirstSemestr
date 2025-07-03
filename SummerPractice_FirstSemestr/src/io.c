@@ -84,7 +84,7 @@ int writeArrayToFile(const char* filename, int* array, int size, int swapCount, 
     }
 
     fprintf(outputFile, "Время выполнения: %.9f сек\n", time);
-    fprintf(outputFile, "Количество перестановок: %d\n", swapCount);
+    fprintf(outputFile, "Количество перестановок: %lld\n", swapCount);
     fprintf(outputFile, "Отсортированный массив:\n");
 
     for (int i = 0; i < size; i++) {

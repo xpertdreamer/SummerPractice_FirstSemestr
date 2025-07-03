@@ -4,6 +4,6 @@
 
 #include <stddef.h>
 
-int insertionSort(int* array, int qt);
+long long insertionSort(int* array, int qt);
 
 #endif // !SORT_H

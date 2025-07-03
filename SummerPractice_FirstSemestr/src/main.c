@@ -112,7 +112,7 @@ int main() {
         }
 
         start = clock();
-        int swapCount = insertionSort(array, size);
+        long long swapCount = insertionSort(array, size);
         end = clock();
 
         cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
@@ -127,7 +127,7 @@ int main() {
 
         free(array);
         printf("\nСортировка завершена за %.9f секунд.\n", cpu_time_used);
-        printf("Количество перестановок: %d\n", swapCount);
+        printf("Количество перестановок: %lld\n", swapCount);
         printf("Исходные данные сохранены в файл '%s'.\n", inputFile);
         printf("Результат сохранен в файл '%s'\n", outputFile);
         printf("Нажмите любую клавишу для продолжения...");
